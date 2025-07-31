@@ -1,0 +1,88 @@
+.container1{
+                display:flex;
+                font-size: large;
+                justify-content: center;
+                align-items: center;
+                grid-template-columns: 1fr;
+                height:400px;
+                margin-top:5px;
+                background-image: url(images/PARKING_HOME.png);
+                background-size:cover;
+                border:5px solid rgba(4, 156, 183, 0.632); 
+                opacity: 0.65;
+            }
+.box{
+    height :400px;
+    background-color: aliceblue;
+    width:350px;
+    border:3px solid rgba(119, 1, 1, 0.851);
+    border-radius: 30px;
+    display:flex;
+    justify-content: center;
+    
+    
+}
+.lgheader{
+    margin-left: 90px;
+    font-size: 25px;
+}
+.input-email {
+    margin-top: none;
+    margin-right: 5px;
+}
+.input-email input{
+    margin-top: none;
+    height: 20px;
+}
+.input-password {
+    margin-top: none;
+    margin-right: 5px;
+}
+.input-password input{
+    margin-top: none;
+    height: 20px;    
+}
+.input-fname {
+    margin-top: none;
+    margin-right: 5px;
+}
+.input-fname input {
+    margin-top: none;
+    height: 20px;
+}
+.input-address {
+    margin-top: none;
+    margin-right: 5px;
+}
+.input-address input{
+    margin-top: none;
+}
+.input-pincode {
+    margin-top: none;
+    margin-right: 5px;
+}
+.input-pincode input{
+    margin-top: none;
+    height: 20px;
+}
+.btn{
+    margin-left: 25%;
+    margin-top: 5px;
+    width:50%;
+    height: 25px;
+}
+.register{
+    font-size: medium;
+    margin-left: 25px;
+}
+
+.flash-success {
+    color: green;
+            font-weight: bold;
+            margin-bottom: 10px;
+ }
+.flash-error {
+            color: red;
+            font-weight: bold;
+            margin-bottom: 10px;
+ }

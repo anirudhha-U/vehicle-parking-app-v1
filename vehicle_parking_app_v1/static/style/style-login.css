@@ -1,0 +1,55 @@
+.container1{
+                display:flex;
+                font-size: large;
+                justify-content: center;
+                align-items: center;
+                grid-template-columns: 1fr;
+                height:400px;
+                margin-top:5px;
+                background-image: url(images/PARKING_HOME.png);
+                background-size:cover;
+                border:5px solid rgba(4, 156, 183, 0.632); 
+                opacity: 0.65;
+            }
+.box{
+    height :350px;
+    background-color: aliceblue;
+    width:300px;
+    border:3px solid rgba(119, 1, 1, 0.851);
+    border-radius: 30px;
+    display:flex;
+    justify-content: center;
+    
+    
+}
+.lgheader{
+    margin-left: 60px;
+}
+.input-email {
+    margin-top:40px;
+    margin-right: 5px;
+}
+.input-password {
+    margin-top :10px;
+    margin-right: 5px;
+}
+.input-email input{
+    height: 30px;
+    width:100%;
+}
+.input-password input{
+    height: 30px;
+    width:100%;
+}
+.btn{
+    margin-left: 25%;
+    margin-top: 25px;
+    width:50%;
+    height: 25px;
+}
+.register{
+    font-size: medium;
+}
+
+
+    

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>QuickPark - Summary</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/style-summary.css') }}">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img class="logo-img" src="{{ url_for('static', filename='style/images/LOGO.png') }}">
+        </div>
+        <div class="name">QUICKPARK</div>
+        <div class="edit">
+            <a href="{{ url_for('edit_profile') }}">
+                <button class="edit-button">Edit</button>
+            </a>
+        </div>
+        <div class="logout">
+            <a href="{{ url_for('logout') }}">
+                <button class="logout-button">Logout</button>
+            </a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="nav-bar">
+            <div class="admin"><p>Welcome Admin</p></div>
+            <div class="home"><a href="{{ url_for('admin_home') }}">Home</a></div>
+            <div class="user"><a href="{{ url_for('admin_users') }}">User</a></div>
+            <div class="search"><a href="{{ url_for('admin_search') }}">Search</a></div>
+            <div class="summary"><a href="{{ url_for('admin_summary') }}">Summary</a></div>
+        </div>
+
+        <div class="summary-section">
+            <h2>Parking Summary Overview</h2>
+            <div class="card-container">
+                <div class="card">
+                    <h3>Total Parking Lots</h3>
+                    <p>{{ total_lots }}</p>
+                </div>
+                <div class="card">
+                    <h3>Total Spots</h3>
+                    <p>{{ total_spots }}</p>
+                </div>
+                <div class="card">
+                    <h3>Occupied Spots</h3>
+                    <p>{{ total_occupied }}</p>
+                </div>
+                <div class="card">
+                    <h3>Available Spots</h3>
+                    <p>{{ total_available }}</p>
+                </div>
+                <div class="card">
+                    <h3>Total Registered Users</h3>
+                    <p>{{ total_users }}</p>
+                </div>
+                <div class="card">
+                    <h3>Total Vehicles Parked</h3>
+                    <p>{{ total_vehicles }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

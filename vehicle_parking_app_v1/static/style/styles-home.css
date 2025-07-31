@@ -1,0 +1,133 @@
+/* ======== Header Styling ======== */
+.header {
+    display: grid;
+    background: rgba(4, 156, 183, 0.85);
+    height: 60px;
+    align-items: center;
+    grid-template-columns: 50px 1fr 60px 80px;
+    padding: 0 10px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+}
+
+.logo-img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.name {
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    margin-left: 15px;
+    align-self: center;
+}
+
+/* Login & Signup Buttons */
+.login, .signup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-button, .signup-button {
+    height: 30px;
+    padding: 0 12px;
+    border-radius: 8px;
+    border: 1.5px solid gray;
+    background-color: white;
+    color: #049cb7;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.login-button:hover, .signup-button:hover {
+    background-color: #049cb7;
+    color: white;
+}
+
+/* ======== Container Styling ======== */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 500px;
+    padding: 40px 20px;
+    font-size: large;
+    color: #f1e90edf;
+    background-image: url('images/PARKING_HOME.png');
+    background-size: cover;
+    background-position: center;
+    border: 5px solid rgba(4, 156, 183, 0.632);
+}
+
+/* ======== Text Blur Box on Home Page ======== */
+.txt {
+    margin-top: 40px;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    border-radius: 10px;
+    font-size: 18px;
+    color: #fff;
+}
+
+/* ======== Parking Lot Table Styling ======== */
+.lot-details {
+    margin-top: 20px;
+    padding: 20px;
+    width: 90%;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    color: #000;
+    text-align: center;
+}
+
+.lot-details h2 {
+    margin-bottom: 10px;
+    color: #049cb7;
+}
+
+.lot-details table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.lot-details th, .lot-details td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+.lot-details th {
+    background-color: #049cb7;
+    color: white;
+}
+
+.lot-details button {
+    padding: 6px 12px;
+    border: none;
+    background-color: #049cb7;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.lot-details button:hover {
+    background-color: #037f97;
+}
+
+.lot-details button:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+}

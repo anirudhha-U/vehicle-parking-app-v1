@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>QuickPark Admin Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/style-user.css') }}">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img class="logo-img" src="{{ url_for('static', filename='style/images/LOGO.png') }}">
+        </div>
+        <div class="name">QUICKPARK</div>
+        <div class="edit">
+            <a href="{{ url_for('edit_profile') }}">
+                <button class="edit-button">Edit</button>
+            </a>
+        </div>
+        <div class="logout">
+            <a href="{{ url_for('logout') }}">
+                <button class="logout-button">Logout</button>
+            </a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="nav-bar">
+            <div class="admin"><p>Welcome Admin</p></div>
+            <div class="home"><a href="{{ url_for('admin_home') }}">Home</a></div>
+            <div class="user"><a href="{{ url_for('admin_users') }}">User</a></div>
+            <div class="search"><a href="{{ url_for('admin_search') }}">Search</a></div>
+            <div class="summary"><a href="{{ url_for('admin_summary') }}">Summary</a></div>
+        </div>
+
+        <!-- Flash Messages -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        <div class="flash-messages">
+            <ul>
+                {% for category, message in messages %}
+                <li class="{{ category }}">{{ message }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+        {% endwith %}
+
+        <div class="lot-details">
+            <h2>Parking Lots</h2>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Place Name</th>
+                        <th>Address</th>
+                        <th>Pincode</th>
+                        <th>Max Spots</th>
+                        <th>Price/hr</th>
+                        <th>Available</th>
+                        <th>Occupied</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for lot in parking_lots %}
+                    <tr>
+                        <td>{{ lot.place_name }}</td>
+                        <td>{{ lot.address }}</td>
+                        <td>{{ lot.pincode }}</td>
+                        <td>{{ lot.max_spots }}</td>
+                        <td>{{ lot.price_per_hour }}</td>
+                        <td>{{ lot.available_spots }}</td>
+                        <td>{{ lot.occupied_spots }}</td>
+                        <td>
+                            <a href="{{ url_for('edit_parking_lot', lot_id=lot.id) }}">
+                                <button>Edit</button>
+                            </a>
+                            {% if lot.occupied_spots == 0 %}
+                            <form action="{{ url_for('view_delete_spot', lot_id=lot.id) }}" method="POST" style="display:inline;">
+                                <button type="submit" onclick="return confirm('Are you sure you want to delete this lot?');">Delete</button>
+                            </form>
+                            {% else %}
+                            <button disabled>Delete</button>
+                            {% endif %}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <br>
+            <a href="{{ url_for('new_parking_lot') }}"><button>Add New Lot</button></a>
+        </div>
+    </div>
+</body>
+</html>

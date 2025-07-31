@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>New Parking Lot - QuickPark</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/styles-home.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/style-signup.css') }}">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img class="logo-img" src="{{ url_for('static', filename='style/images/LOGO.png') }}">
+        </div>
+        <div class="name">QUICKPARK</div>
+    </div>
+
+    <div class="container1">
+        <div class="box">
+            <div class="login-box">
+                <form action="{{ url_for('new_parking_lot') }}" method="POST">
+                    <h1 class="lgheader">New Parking Lot</h1>
+
+                    <p>Prime Location Name:
+                    <input name="place_name" type="text" required></p>
+
+                    <p>Address:
+                    <textarea name="address" rows="3" required></textarea></p>
+
+                    <p>Pin code:
+                    <input name="pincode" type="text" required></p>
+
+                    <p>Price (per hour):
+                    <input name="price_per_hour" type="text" required></p>
+
+                    <p>Maximum spots:
+                    <input name="max_spots" type="text" required></p>
+
+                    <div class="sub-btn">
+                        <button type="submit" class="btn">Add</button>
+                        <a href="{{ url_for('admin_home') }}" class="btn">Cancel</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

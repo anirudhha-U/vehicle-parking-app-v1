@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>QuickPark</title> 
+    <!-- Corrected CSS path -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/styles-home.css') }}">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <!-- Corrected image path -->
+            <img class="logo-img" src="{{ url_for('static', filename='style/images/LOGO.png') }}" alt="Logo">
+        </div>
+        <div class="name">
+            QUICKPARK
+        </div>
+        <div class="login">
+            <a href="{{ url_for('login') }}">
+                <button class="login-button">Login</button>
+            </a>
+        </div>
+        <div class="signup">
+            <a href="{{ url_for('signup') }}">
+                <button class="signup-button">Sign Up</button>
+            </a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="txt">Experience The Best Parking</div>
+    </div>
+</body>
+</html>

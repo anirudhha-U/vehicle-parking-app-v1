@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>QuickPark - Search Parking</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/style-user.css') }}">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img class="logo-img" src="{{ url_for('static', filename='style/images/LOGO.png') }}">
+        </div>
+        <div class="name">QUICKPARK</div>
+        <div class="edit">
+            <a href="{{ url_for('edit_profile') }}">
+                <button class="edit-button">Edit</button>
+            </a>
+        </div>
+        <div class="logout">
+            <a href="{{ url_for('logout') }}">
+                <button class="logout-button">Logout</button>
+            </a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="nav-bar">
+            <div class="admin"><p>Welcome {{ session['username'] }}</p></div>
+            <div class="home"><a href="{{ url_for('user_home') }}">Home</a></div>
+            <div class="search"><a href="{{ url_for('user_search') }}">Search</a></div>
+            <div class="summary"><a href="{{ url_for('user_summary') }}">Summary</a></div>
+        </div>
+
+        <div class="lot-details">
+            <h2>Search & Book Parking</h2>
+            <form method="GET" action="{{ url_for('user_search') }}">
+                <select name="category">
+                    <option value="place_name">Place Name</option>
+                    <option value="pincode">Pincode</option>
+                    <option value="address">Address</option>
+                </select>
+                <input type="text" name="query" placeholder="Search value" required>
+                <button type="submit">Search</button>
+            </form>
+
+            {% if results %}
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Place Name</th>
+                        <th>Address</th>
+                        <th>Pincode</th>
+                        <th>Price/hr</th>
+                        <th>Available</th>
+                        <th>Book</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for lot in results %}
+                    <tr>
+                        <td>{{ lot.place_name }}</td>
+                        <td>{{ lot.address }}</td>
+                        <td>{{ lot.pincode }}</td>
+                        <td>{{ lot.price_per_hour }}</td>
+                        <td>{{ lot.available_spots }}</td>
+                        <td>
+                            {% if lot.available_spots > 0 %}
+                            <form method="POST" action="{{ url_for('book_spot', lot_id=lot.id) }}">
+                                <input type="text" name="vehicle_no" placeholder="Vehicle No" required>
+                                <button type="submit">Book</button>
+                            </form>
+                            {% else %}
+                            <button disabled>Full</button>
+                            {% endif %}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

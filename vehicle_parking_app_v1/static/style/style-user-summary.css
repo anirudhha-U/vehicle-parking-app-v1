@@ -1,0 +1,160 @@
+            .header{
+                display:grid;
+                background: rgba(4, 156, 183, 0.632);
+                height:50px;
+                align-items: center;
+                grid-template-columns: 50px  1fr 60px 80px;
+            }
+            .logo{
+                display: inline-block;
+                font-size: medium;
+                height: 40px;
+                width: 40px;
+                align-self: center;
+                margin-left: 10px;
+                
+            }
+            .logo-img{
+              width:40px;
+              border-radius:18px;
+            }
+            
+            .name{
+                display: inline-block;
+                height: 20 px;
+                width:25px;
+                margin-right: 100px;
+                margin-left:15px;
+                font-size: larger;
+                align-self: center;
+                
+            }
+            .edit{
+                display: inline-block;
+                height: 20 px;
+                margin-right: 10px;
+                align-self: center;
+            }
+            .logout{
+                display: inline-block;
+                align-self: center;
+                margin-right: 10px;
+                
+            }
+            .edit-button{
+                height:25px;
+                width:50px;
+                border-radius: 10px; 
+                border-width: 2px;
+                border-color: gray;
+            }
+            .logout-button{
+                border-radius: 10px;
+                width: 68px;
+                height:25px; 
+                border-color: gray;
+            }
+            .container{
+                display:grid;
+                font-size: large;
+                justify-content: center;
+                color: rgba(241, 233, 14, 0.957);
+                grid-template-columns: 1fr;
+                height:600px;
+                margin-top:5px;
+                background-color: rgba(4, 156, 183, 0.632);
+                background-size:cover;
+                border:5px solid rgba(4, 156, 183, 0.632); 
+            }
+            .nav-bar{
+                background-color: rgba(69, 152, 31, 0.905);
+                height: 65px;
+                border-radius: 5px;
+                display: grid;
+                align-items: center;
+                grid-template-columns: 140px 60px 60px 60px 60px 1fr 60px ;
+            }
+            .admin{
+                display: inline-block;
+                
+            }
+            .home{
+                display: inline-block;
+            }
+            .user{
+                display: inline-block;
+                margin-left: 10px;
+            }
+            .search{
+                display: inline-block;
+                margin-left: 6px;
+
+            }
+            .summary{
+                display: inline-block;
+                margin-left: 16px;
+            }
+            .home a{
+                text-decoration: none;
+            }
+            .user a{
+                text-decoration: none;
+            }
+            .search a{
+                text-decoration: none;
+            }
+            .summary a{
+                text-decoration: none;
+            }
+           .cont{
+                display:grid;
+                font-size: large;
+                justify-content: center;
+                color: rgba(241, 233, 14, 0.957);
+                grid-template-columns: 1fr;
+                height:530px;
+                margin-top:5px;
+                background-color: rgba(4, 156, 183, 0.632);
+                background-size:cover;
+                border:5px solid rgba(4, 156, 183, 0.632); 
+
+           }
+           .cont-head{
+             background-color: rgba(78, 232, 234, 0.905);
+                height: 45px;
+                border-radius: 5px;
+                display: grid;
+                align-items: center;
+                grid-template-columns: 300px 1fr 60px
+                
+           }
+           .contains{
+            margin-left: 20px;
+            display: inline-block;
+            color: rgb(61, 14, 14)
+           }
+           .addlot{
+            display: inline-block;
+           }
+           .addlot a{
+                text-decoration: none;
+           }   
+           .cont-body{
+            display: grid;
+            justify-content: center;
+            height:500px;
+            background-color: bisque;
+            grid-template-columns: 1fr 5px 1fr
+           }
+           .sum1{
+            display: inline-block;
+            background-color: aquamarine;
+            height: 500px;
+           }
+           .sum2{
+            display: inline-block;
+            background-color: black;
+            height: 500px;
+           }
+
+                   

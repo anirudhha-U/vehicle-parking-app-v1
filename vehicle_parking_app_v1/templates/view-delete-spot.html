@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View/Delete Spot - QuickPark</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/styles-home.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/style-signup.css') }}">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img class="logo-img" src="{{ url_for('static', filename='style/images/LOGO.png') }}">
+        </div>
+        <div class="name">QUICKPARK</div>
+    </div>
+
+    <div class="container1">
+        <div class="box">
+            <h1 class="lgheader" style="text-align: center;">View/Delete Parking Spots</h1>
+
+            {% if spots %}
+                {% for spot in spots %}
+                    <div class="login-box" style="margin-bottom: 20px;">
+                        <p><strong>Spot ID:</strong>
+                        <input type="text" value="{{ spot.id }}" disabled></p>
+
+                        <p><strong>Status:</strong>
+                        <input type="text" value="{{ spot.status }}" disabled></p>
+
+                        {% if spot.status == 'vacant' %}
+                            <form action="{{ url_for('delete_spot', spot_id=spot.id) }}" method="POST" style="display:inline;">
+                                <button type="submit" class="btn">Delete</button>
+                            </form>
+                        {% else %}
+                            <p style="color: red;"><strong>Cannot delete occupied spot.</strong></p>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+            {% else %}
+                <p style="text-align: center;">No parking spots found for this lot.</p>
+            {% endif %}
+
+            <div style="text-align: center; margin-top: 20px;">
+                <a href="{{ url_for('admin_home') }}" class="btn">Back to Dashboard</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

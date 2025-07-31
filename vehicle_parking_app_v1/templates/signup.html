@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>QuickPark - Sign Up</title> 
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/styles-home.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/style-signup.css') }}">
+</head>
+<body>
+
+      {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        {% for category, message in messages %}
+          <div class="flash-{{ category }}">{{ message }}</div>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+
+    <div class="header">
+      <div class="logo">
+        <img class="logo-img" src="{{ url_for('static', filename='style/images/LOGO.png') }}">
+      </div>
+      <div class="name">QUICKPARK</div>
+    </div>
+
+    <div class="container1">
+      <div class="box">
+        <div class="login-box">
+          <form action="{{ url_for('signup') }}" method="POST">
+            <h1 class="lgheader">Sign Up</h1>
+
+            <div class="input-email">
+              <p>Username:
+              <input name="username" type="text" placeholder="Username" required></p>
+            </div> 
+
+            <div class="input-password">
+              <p>Password: 
+              <input name="password" type="password" placeholder="Password" required></p>
+            </div>
+
+            <div class="input-fname">
+              <p>Full Name: 
+              <input name="full_name" type="text" placeholder="Full Name" required></p>
+            </div>
+
+            <div class="input-Address">
+              <p>Address: 
+              <input name="address" type="text" placeholder="Address" required></p>
+            </div>
+
+            <div class="input-pincode">
+              <p>Pincode: 
+              <input name="pin_code" type="text" placeholder="Pincode" required></p>
+            </div>
+
+            <div class="sub-btn">
+              <button type="submit" class="btn">REGISTER</button>
+            </div>
+
+            <div class="register">
+              <p>Already have an account? 
+              <a href="{{ url_for('login') }}">Login</a>
+              </p>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+
+</body>
+</html>

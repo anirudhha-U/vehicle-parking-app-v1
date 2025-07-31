@@ -1,0 +1,76 @@
+            .header{
+                display:grid;
+                background: rgba(4, 156, 183, 0.632);
+                height:50px;
+                align-items: center;
+                grid-template-columns: 50px  1fr 60px 80px;
+            }
+            .logo{
+                display: inline-block;
+                font-size: medium;
+                height: 40px;
+                width: 40px;
+                align-self: center;
+                margin-left: 10px;
+                
+            }
+            .logo-img{
+              width:40px;
+              border-radius:18px;
+            }
+            
+            .name{
+                display: inline-block;
+                height: 20 px;
+                width:25px;
+                margin-right: 100px;
+                margin-left:15px;
+                font-size: larger;
+                align-self: center;
+                
+            }
+            .login{
+                display: inline-block;
+                height: 20 px;
+                margin-right: 10px;
+                align-self: center;
+            }
+            .login-button{
+                height:25px;
+                width:50px;
+                border-radius: 10px; 
+                border-width: 2px;
+                border-color: gray;
+            }
+            .signup{
+                display: inline-block;
+                align-self: center;
+                margin-right: 10px;
+                
+            }
+            
+            .signup-button{
+                border-radius: 10px;
+                width: 68px;
+                height:25px; 
+                border-color: gray;
+            }
+            .container{
+                display:flex;
+                font-size: large;
+                justify-content: center;
+                color: rgba(241, 233, 14, 0.957);
+                grid-template-columns: 1fr;
+                height:400px;
+                margin-top:5px;
+                background-image: url(images/PARKING_HOME.png);
+                background-size:cover;
+                border:5px solid rgba(4, 156, 183, 0.632); ;
+            }
+            .txt{
+              margin-top:40px;
+              background: transparent;
+              backdrop-filter: blur(12px);
+              height:20px;
+            }
+            

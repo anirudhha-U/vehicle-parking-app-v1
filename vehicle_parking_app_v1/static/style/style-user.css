@@ -1,0 +1,167 @@
+/* ========== Header Section ========== */
+.header {
+    display: grid;
+    background: rgba(4, 156, 183, 0.632);
+    height: 50px;
+    align-items: center;
+    grid-template-columns: 50px 1fr 60px 80px;
+}
+
+.logo {
+    display: inline-block;
+    font-size: medium;
+    height: 40px;
+    width: 40px;
+    align-self: center;
+    margin-left: 10px;
+}
+
+.logo-img {
+    width: 40px;
+    border-radius: 18px;
+}
+
+.name {
+    display: inline-block;
+    margin-left: 15px;
+    font-size: larger;
+    align-self: center;
+}
+
+.edit, .logout {
+    display: inline-block;
+    align-self: center;
+    margin-right: 10px;
+}
+
+.edit-button, .logout-button {
+    height: 30px;
+    border-radius: 10px;
+    border: 2px solid gray;
+}
+
+.edit-button {
+    width: 50px;
+}
+
+.logout-button {
+    width: 68px;
+}
+
+/* ========== Container & Layout ========== */
+.container {
+    display: block;
+    font-size: large;
+    color: rgba(213, 255, 63, 0.957);
+    margin-top: 0;
+    background-color: rgba(4, 156, 183, 0.632);
+    background-size: cover;
+    border: 5px solid rgba(4, 156, 183, 0.632);
+    padding-bottom: 30px;
+}
+
+/* ========== Navigation Bar ========== */
+.nav-bar {
+    background-color: rgba(69, 152, 31, 0.905);
+    height: 65px;
+    border-radius: 5px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 140px 60px 60px 60px 60px 1fr 60px;
+    margin-bottom: 10px;
+}
+
+.nav-bar .admin,
+.nav-bar .home,
+.nav-bar .user,
+.nav-bar .search,
+.nav-bar .summary {
+    display: inline-block;
+}
+
+.nav-bar .user {
+    margin-left: 10px;
+}
+
+.nav-bar .search {
+    margin-left: 6px;
+}
+
+.nav-bar .summary {
+    margin-left: 16px;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    color: white;
+}
+
+/* ========== Lot Details Section ========== */
+.lot-details {
+    padding: 20px;
+    color: black;
+    text-align: center;
+}
+
+.lot-details h2 {
+    margin-bottom: 15px;
+    color: white;
+}
+
+.lot-details table {
+    width: 95%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+.lot-details th, .lot-details td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+/* ========== Buttons ========== */
+.lot-details button {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    cursor: pointer;
+}
+
+.lot-details button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.lot-details form {
+    display: inline;
+}
+
+/* ========== Flash Messages ========== */
+.flash-messages ul {
+    list-style: none;
+    padding: 10px;
+    margin: 10px auto;
+    width: 80%;
+    color: #fff;
+    background-color: #ff9f43;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.flash-messages li.success {
+    background-color: #2ecc71;
+}
+
+.flash-messages li.error {
+    background-color: #e74c3c;
+}
+
+/* ========== General Reset ========== */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: #f0f0f0;
+}

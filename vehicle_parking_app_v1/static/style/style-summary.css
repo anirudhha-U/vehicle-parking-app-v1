@@ -1,0 +1,125 @@
+/* ========== Reset and Base Styles ========== */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: #f0f0f0;
+}
+
+/* ========== Header ========== */
+.header {
+    display: grid;
+    background: rgba(4, 156, 183, 0.632);
+    height: 50px;
+    align-items: center;
+    grid-template-columns: 50px 1fr 60px 80px;
+    padding: 0 10px;
+}
+
+.logo-img {
+    width: 40px;
+    border-radius: 18px;
+}
+
+.name {
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    margin-left: 15px;
+    align-self: center;
+}
+
+.edit, .logout {
+    align-self: center;
+    margin-right: 10px;
+}
+
+.edit-button, .logout-button {
+    height: 25px;
+    border-radius: 10px;
+    border: 2px solid gray;
+    background-color: white;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.edit-button:hover,
+.logout-button:hover {
+    background-color: #dcefff;
+}
+
+/* ========== Nav Bar ========== */
+.nav-bar {
+    background-color: rgba(69, 152, 31, 0.905);
+    height: 65px;
+    border-radius: 5px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 160px 80px 80px 80px 80px 1fr 60px;
+    padding: 0 10px;
+    margin-bottom: 10px;
+}
+
+.nav-bar .admin {
+    font-weight: bold;
+    color: yellow;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
+
+/* ========== Container ========== */
+.container {
+    background-color: rgba(4, 156, 183, 0.632);
+    padding-bottom: 30px;
+    min-height: 100vh;
+}
+
+/* ========== Summary Section ========== */
+.summary-section {
+    padding: 20px;
+    color: black;
+    text-align: center;
+}
+
+.summary-section h2 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+/* ========== Card Styles ========== */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    width: 250px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.card p {
+    font-size: 24px;
+    font-weight: bold;
+    color: #049cb7;
+}
